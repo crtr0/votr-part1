@@ -16,7 +16,7 @@ exports.index = function(req, res){
  */
 
 exports.voteSMS = function(request, response) {
-    if (twiliosig.valid(request, config.twilio.key) || true) {
+    if (twiliosig.valid(request, config.twilio.key) || config.disableTwilioSigCheck) {
         response.header('Content-Type', 'text/xml');
         var body = request.param('Body').trim();
         
@@ -56,7 +56,8 @@ exports.voteSMS = function(request, response) {
                         response.send('<Response><Sms>We encountered an error saving your vote. Try again?</Sms></Response>');  
                     }
                     else {
-                        response.send('<Response><Sms>Thanks for your vote for ' + event.name + '. Powered by Twilio.</Sms></Response>');   
+                        console.log('Accepting vote: ' + event.name + ', ' + from);
+                        response.send('<Response><Sms>Thanks for your vote for ' + res.name + '. Powered by Twilio.</Sms></Response>');   
                     }
                 });
             }  

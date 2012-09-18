@@ -34,7 +34,7 @@ var config = require('./config')
   	          }
   	      }          
   	  }); 
-  	}
+  }
 
   // check to see if this user has voted for this event
 
@@ -63,7 +63,7 @@ var config = require('./config')
   		      callback(msg, null);
           }
   		    else {
-  		      callback(null, res);
+  		      callback(null, event.voteoptions[index]);
   		    }
 
   		});    	
