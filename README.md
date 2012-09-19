@@ -7,4 +7,4 @@ This app is part of the [first blog post][1] in a four-part series on building a
 * Creating a new route to process votes
 * Connecting Twilio to this route
 
-[1]: http://twilio.com/blog/foo
+[1]: http://www.twilio.com/blog/2012/09/building-a-real-time-sms-voting-app-part-1-node-js-couchdb.html
