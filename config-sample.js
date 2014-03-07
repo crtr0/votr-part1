@@ -11,4 +11,6 @@ config.couchdb.password = 'yyy';
 config.twilio.sid = 'ACxxx';
 config.twilio.key = 'yyy';
 
+config.disableTwilioSigCheck = false;
+
 module.exports = config;
