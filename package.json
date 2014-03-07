@@ -1,18 +1,18 @@
 {
-  "name": "votr-part-1",
-  "version": "0.0.2",
+  "name": "crabasa-votr-part-1",
+  "version": "0.0.2-2",
   "private": true,
   "scripts": {
     "start": "app.js"
   },
   "dependencies": {
-    "express": "3.0.0rc3",
-    "hjs": "*",
-    "cradle": "0.6.3",
-    "twiliosig": "0.0.1"
+    "express": "3.5.0",
+    "hjs": "0.0.6",
+    "cradle": "0.6.7",
+    "twilio": "1.6.0"
   },
-  "subdomain": "votr-part1",
+  "subdomain": "crabasa-votr-part-1",
   "engines": {
-    "node": "0.6.x"
+    "node": "0.10.x"
   }
 }
