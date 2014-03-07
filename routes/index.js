@@ -1,6 +1,6 @@
 var utils = require('../utils')
   , config = require('../config')
-  , twiliosig = require('twiliosig')
+  , twilio = require('twilio')
   , events = require('../events');
 
 /*
@@ -16,7 +16,7 @@ exports.index = function(req, res){
  */
 
 exports.voteSMS = function(request, response) {
-    if (twiliosig.valid(request, config.twilio.key) || config.disableTwilioSigCheck) {
+    if (twilio.validateExpressRequest(request, config.twilio.key) || config.disableTwilioSigCheck) {
         response.header('Content-Type', 'text/xml');
         var body = request.param('Body').trim();
         
