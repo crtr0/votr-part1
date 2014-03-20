@@ -16,7 +16,7 @@ exports.index = function(req, res){
  */
 
 exports.voteSMS = function(request, response) {
-    if (twilio.validateExpressRequest(request, config.twilio.key) || config.disableTwilioSigCheck) {
+    if (twilio.validateExpressRequest(request, config.twilio.key, {url: config.twilio.smsWebhook}) || config.disableTwilioSigCheck) {
         response.header('Content-Type', 'text/xml');
         var body = request.param('Body').trim();
         

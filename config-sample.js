@@ -10,7 +10,8 @@ config.couchdb.password = 'yyy';
 
 config.twilio.sid = 'ACxxx';
 config.twilio.key = 'yyy';
-
+config.twilio.smsWebhook = 'https://nodeserver/vote/sms';
+config.twilio.voiceWebhook = 'https://nodeserver/vote/voice';
 config.disableTwilioSigCheck = false;
 
 module.exports = config;
